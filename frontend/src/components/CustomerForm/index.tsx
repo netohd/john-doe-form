@@ -48,13 +48,27 @@ export default function CustomerForm() {
       },
       body: JSON.stringify(values),
     })
-      .then(() => {
-        setPopUpMessage({
-          open: true,
-          type: "success",
-          message: "Cliente cadastrado com sucesso!"
-        });
-        setValues(initialValues);
+      .then(async (response) => {
+        if (response.status === 200) {
+          setPopUpMessage({
+            open: true,
+            type: "success",
+            message: "Cliente cadastrado com sucesso!"
+          });
+          setValues(initialValues);
+        } else if (response.status === 400) {
+          setPopUpMessage({
+            open: true,
+            type: "error",
+            message: "CPF já cadastrado!"
+          });
+        } else {
+          setPopUpMessage({
+            open: true,
+            type: "error",
+            message: "Erro ao efetuar cadastro!"
+          });
+        }
       })
       .catch(() => {
         setPopUpMessage({
@@ -63,7 +77,7 @@ export default function CustomerForm() {
           message: "Erro ao efetuar cadastro!"
         });
       });
-  }
+  };
 
   const handleClosePopUp = () => {
     setPopUpMessage({

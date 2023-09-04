@@ -15,7 +15,7 @@ const initialValues = {
   email: '',
   favColor: '',
   obs: '',
-};
+}
 
 const theme = createTheme({
   palette: {

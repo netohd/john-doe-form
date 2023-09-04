@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
-enum RainbowColor {
+export enum RainbowColor {
   RED = 'Vermelho',
   ORANGE = 'Laranja',
   YELLOW = 'Amarelo',
