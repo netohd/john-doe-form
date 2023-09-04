@@ -13,3 +13,5 @@ And access the address in the browser:
 ```js
    localhost:3000
 ```
+
+![image](https://github.com/netohd/john-doe-form/assets/23285614/84831585-d24b-4101-8f5a-6155d4792e2e)
