@@ -1,6 +1,6 @@
 # John Doe Forms
 
-This is a simple form to register customers.
+This is form developed with React, Vite, Typescript, Docker, PostgreSQL and MaterialUI to register customers.
 
 To run the project, run the command:
 
