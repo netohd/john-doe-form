@@ -1,13 +1,13 @@
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
 enum RainbowColor {
-  RED = 'red',
-  ORANGE = 'orange',
-  YELLOW = 'yellow',
-  GREEN = 'green',
-  BLUE = 'blue',
-  INDIGO = 'indigo',
-  VIOLET = 'violet',
+  RED = 'Vermelho',
+  ORANGE = 'Laranja',
+  YELLOW = 'Amarelo',
+  GREEN = 'Verde',
+  BLUE = 'Azul',
+  INDIGO = 'Anil',
+  VIOLET = 'Violeta'
 }
 
 @Entity()
@@ -32,6 +32,6 @@ export class Customer {
   })
   favColor: RainbowColor;
 
-  @Column("text")
+  @Column("text", { nullable: true })
   obs: string;
 }

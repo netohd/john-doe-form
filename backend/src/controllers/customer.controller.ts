@@ -3,6 +3,7 @@ import { createCustomerService } from "../services/customer.service";
 
 export const createCustomer = async (req: Request, res: Response) => {
   try {
+    console.log(req, 'reqqqq')
     const result = await createCustomerService(req.body);
     return res.status(200).json({
       message: 'Customer created sucessful',

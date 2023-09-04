@@ -5,7 +5,7 @@ const customerRoutes = Router();
 customerRoutes.use(express.json())
 
 customerRoutes.post("/customer", createCustomer);
-customerRoutes.get('/', (req, res) => {
+customerRoutes.get("/", (req, res) => {
   res.send("Hello John!");
 })
 
