@@ -11,18 +11,11 @@ services:
       PORT: 3002
     ports:
       - "3002:3002"
-    command: npm start
-    volumes:
-      - ./backend:/app
-      - /app/node_modules
 
   frontend:
     build: ./frontend
     ports:
       - "3000:4173"
-    command: npm run dev
-    volumes:
-      - ./frontend:/app
 
   postgres:
     image: postgres:11
