@@ -1,10 +1,11 @@
 version: "3"
 services:
   backend:
-    restart: on-failure
+    restart: always
     build: ./backend
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     environment:
       DATABASE_URL: postgres://john:pass@postgres:5432/john-doe-form
       NODE_ENV: development
@@ -25,3 +26,8 @@ services:
       POSTGRES_USER: john
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: john-doe-form
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d john-doe-form -U john"]
+      interval: 5s
+      timeout: 10s
+      retries: 120
