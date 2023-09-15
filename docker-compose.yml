@@ -9,7 +9,6 @@ services:
     environment:
       DATABASE_URL: postgres://john:pass@postgres:5432/john-doe-form
       NODE_ENV: development
-      PORT: 3002
     ports:
       - "3002:3002"
 
