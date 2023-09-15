@@ -7,6 +7,4 @@ RUN npm cache clean --force
 RUN npm install
 COPY . .
 
-EXPOSE 3002
-
 CMD [ "npm", "start" ]
